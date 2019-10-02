@@ -23,10 +23,9 @@ public class MessageServiceImpl implements MessageService {
 
     @Override
     public void sendMessage() {
-        String message = LocalDateTime.now().toString();
+        String message = "M1 A00190923010506420103200039140061765";
         LOGGER.info("Send message: {}", message);
-        byte[] responseBytes = tcpClientGateway.send(message.getBytes());
-        String response = new String(responseBytes);
+        String response = tcpClientGateway.send(message);
         LOGGER.info("Receive response: {}", response);
     }
 

@@ -15,7 +15,7 @@ public class MessageJobScheduler {
         this.messageService = messageService;
     }
 
-    @Scheduled(fixedDelay = 1000L)
+    @Scheduled(fixedDelay = 10000L)
     public void sendMessageJob() {
         messageService.sendMessage();
     }
